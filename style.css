@@ -250,8 +250,8 @@ nav .btn{padding:9px 18px;font-size:.86rem;z-index:1;background:transparent;colo
  .end .btn.mag{grid-column:1;grid-row:auto}
  .frow{flex-wrap:wrap;align-items:center;white-space:normal}
 }
-/* Celular: o brilho (.halo) dos cards da coleção passava 14px da tela e deixava
-   a página mais larga que o celular (no iPhone isso faz o Safari "encolher" o site) */
-html{overflow-x:hidden}
-#colecao{overflow-x:hidden;overflow-x:clip}
-
+/* Celular: o brilho (.halo) dos cards da coleção tinha 120% da largura do card
+   e passava 14px da tela (no iPhone isso faz o Safari "encolher" o site).
+   No celular ele fica do tamanho do card; nada de overflow no html/body,
+   senão o sticky do relógio da sessão 2 para de funcionar. */
+@media(max-width:820px){.halo{width:100%}}
